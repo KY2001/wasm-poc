@@ -38,9 +38,24 @@ int main(){
 ```
 
 ## performance comparison
-1. When compiled by GCC in the native environment
+1. When compiled by GCC in the native environment: 2.73 sec.
 
+![](image/result_native.png)
 
+2. When Wasm binary is run on the chrome browser: 5.91 sec
+
+![](image/result_browser.png)
+
+<strong>Even on the browser, the performance is almost equivalent to that of the native environment.</strong>
+
+## How to execute wasm binary
+1. Clone this project.
+2. Move to `/public` directory.
+3. Install Python and run the following command from a terminal.
+```
+python -m http.server 8080
+```
+4. Open `http://localhost:8080/main.html` from your browser.
 
 ## How to build.
 1. Install and activate Emscripten by following [here](https://emscripten.org/docs/getting_started/downloads.html).
@@ -48,4 +63,10 @@ int main(){
 ```
 git clone https://github.com/KY2001/Wasm-PoC
 ```
-3. 
+3. Move to `/build` directory.
+4. Run the following command from a terminal.
+```
+emccmake cmake ..
+make
+```
+5. Wasm binary (main.wasm) and corresponding JavaScript file (main.js) are generate in /public.
