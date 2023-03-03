@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/main.dir/includes_CXX.rsp
 
-CXX_FLAGS = -g -s USE_BOOST_HEADERS=1
+CXX_FLAGS = -s USE_BOOST_HEADERS=1 -O3
 

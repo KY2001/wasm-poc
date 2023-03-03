@@ -3,8 +3,6 @@
 #include <iomanip>
 #include <complex>
 #include <Eigen/Dense>
-#include <boost/array.hpp>
-// #include <emscripten.h>
 
 
 int main(){
@@ -15,13 +13,15 @@ int main(){
     // Eigenの利用
     int n = 9;
     int size = (1 << n);
-    int rep = 1;
-    // 単位行列
-    Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic> x = Eigen::MatrixXcd::Identity(size, size);
+    int rep = 10;
+
+    // ランダム行列の生成
+    Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic> x = Eigen::MatrixXcd::Random(size, size);
+    Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic> y = Eigen::MatrixXcd::Random(size, size);
 
     // size×size行列の行列積をrep回繰り返す
     for (int _ = 0; _ < rep; _++){
-        x *= Eigen::MatrixXcd::Random(size, size);
+        x *= y;
     }
 
     std::cout << "プログラムが終了しました！\n" 

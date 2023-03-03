@@ -39,14 +39,22 @@ int main(){
 
 ## performance comparison
 1. When compiled by GCC in the native environment: 2.73 sec.
-
-![](image/result_native.png)
+```
+プログラムの開始！
+プログラムが終了しました！
+処理に要した時間は、0.718791 秒でした。
+```
 
 2. When Wasm binary is run on the chrome browser: 5.91 sec
+```
+プログラムの開始！
+プログラムが終了しました！
+処理に要した時間は、1.199000 秒でした。
+```
 
-![](image/result_browser.png)
+<strong>-> Even on the browser, the performance is almost equivalent to that of the native environment.</strong><br>
+(In both cases, the O3 optimization is enabled.)
 
-<strong>-> Even on the browser, the performance is almost equivalent to that of the native environment.</strong>
 
 ## How to execute wasm binary
 1. Clone this project.
