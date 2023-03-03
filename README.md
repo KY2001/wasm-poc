@@ -46,7 +46,7 @@ int main(){
 
 ![](image/result_browser.png)
 
-<strong>Even on the browser, the performance is almost equivalent to that of the native environment.</strong>
+<strong>-> Even on the browser, the performance is almost equivalent to that of the native environment.</strong>
 
 ## How to execute wasm binary
 1. Clone this project.
