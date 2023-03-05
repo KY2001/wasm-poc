@@ -74,7 +74,7 @@ python -m http.server 8080
 
 ⚠ If local changes are not reflected, clear your browser cache.
 
-## How to build.
+## How to build
 1. Install and activate Emscripten according to the [official documentation](https://emscripten.org/docs/getting_started/downloads.html).
 2. Clone this prject.
 ```
