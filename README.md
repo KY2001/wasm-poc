@@ -1,6 +1,9 @@
 # Wasm-PoC
 ## What is this?
-Generate Wasm binary and compare performance with native environment.<br>
+Generate Wasm binary and compare performance with native environment.
+
+<img src="images/screenshot.png" width=100%>
+
 The program itself is very simple, just use [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page) to obtain the matrix product.<br>
 `src/main.cpp`
 ```
@@ -12,7 +15,11 @@ The program itself is very simple, just use [Eigen](https://eigen.tuxfamily.org/
 
 
 int main(){
-    std::cout << "プログラムの開始！" << std::endl;
+    // ログの出力
+    std::cout << "プログラムの開始！" << std::endl
+        << "このWasmバイナリでは、行列演算ライブラリのEigenを用いて行列計算を行います。" << std::endl
+        << "具体的なパラメータなどは `src/main.cpp` をご覧ください。" << std::endl
+        << std::endl;
     // 開始時間の測定
     auto start_time = clock();
 
@@ -64,6 +71,8 @@ int main(){
 python -m http.server 8080
 ```
 4. Open `http://localhost:8080/main.html` from your browser.
+
+⚠ If local changes are not reflected, clear your browser cache.
 
 ## How to build.
 1. Install and activate Emscripten according to the [official documentation](https://emscripten.org/docs/getting_started/downloads.html).
