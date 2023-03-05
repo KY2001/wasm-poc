@@ -84,15 +84,14 @@
     <div class="emscripten">
       <progress hidden id="progress" max="100" value="0"></progress>
     </div>
-    <div class="emscripten_border">
-      <canvas
-        class="emscripten"
-        id="canvas"
-        oncontextmenu="event.preventDefault()"
-        tabindex="-1"
-      ></canvas>
+    <div style="text-align: center">
+      <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WebAssembly_Logo.svg/1200px-WebAssembly_Logo.svg.png"
+        alt="WebAssemblyのロゴ"
+        width=10%
+      >
     </div>
-    <hr />
+    <!-- <hr />
     <div class="emscripten">
       <input type="checkbox" id="resize" />Resize canvas
       <input type="checkbox" id="pointerLock" checked />Lock/hide mouse pointer
@@ -103,7 +102,7 @@
         value="Fullscreen"
       />
     </div>
-    <hr />
+    <hr /> -->
     <textarea class="emscripten" id="output" rows="8"></textarea>
     <hr />
     <script>
@@ -123,22 +122,6 @@
                   console.log(t),
                   e && ((e.value += t + "\n"), (e.scrollTop = e.scrollHeight));
               }
-            );
-          })(),
-          canvas: (function () {
-            var e = document.getElementById("canvas");
-            return (
-              e.addEventListener(
-                "webglcontextlost",
-                function (e) {
-                  alert(
-                    "WebGL context lost. You will need to reload the page."
-                  ),
-                    e.preventDefault();
-                },
-                !1
-              ),
-              e
             );
           })(),
           setStatus: function (e) {

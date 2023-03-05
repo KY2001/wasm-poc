@@ -144,7 +144,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=test_eigen
+CMAKE_PROJECT_NAME:STATIC=Wasm-PoC
 
 //Emscripten ranlib
 CMAKE_RANLIB:FILEPATH=/home/ky2001/OneDrive/research/20230131_mito_target/WebAssembly/emsdk/upstream/emscripten/emranlib
@@ -222,13 +222,13 @@ EMSCRIPTEN_FORCE_COMPILERS:BOOL=ON
 EMSCRIPTEN_GENERATE_BITCODE_STATIC_LIBRARIES:BOOL=OFF
 
 //Value Computed by CMake
-test_eigen_BINARY_DIR:STATIC=/home/ky2001/OneDrive/research/20230131_mito_target/WebAssembly/experiment_project/Wasm-PoC/build
+Wasm-PoC_BINARY_DIR:STATIC=/home/ky2001/OneDrive/research/20230131_mito_target/WebAssembly/experiment_project/Wasm-PoC/build
 
 //Value Computed by CMake
-test_eigen_IS_TOP_LEVEL:STATIC=ON
+Wasm-PoC_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-test_eigen_SOURCE_DIR:STATIC=/home/ky2001/OneDrive/research/20230131_mito_target/WebAssembly/experiment_project/Wasm-PoC
+Wasm-PoC_SOURCE_DIR:STATIC=/home/ky2001/OneDrive/research/20230131_mito_target/WebAssembly/experiment_project/Wasm-PoC
 
 
 ########################

@@ -6,7 +6,11 @@
 
 
 int main(){
-    std::cout << "プログラムの開始！" << std::endl;
+    // ログの出力
+    std::cout << "プログラムの開始！" << std::endl
+        << "このWasmバイナリでは、行列演算ライブラリのEigenを用いて行列計算を行います。" << std::endl
+        << "具体的なパラメータなどは `src/main.cpp` をご覧ください。" << std::endl
+        << std::endl;
     // 開始時間の測定
     auto start_time = clock();
 
